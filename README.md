@@ -1,104 +1,94 @@
-# cat-simulator
-Educational CAT Simulator - Interactive tool for exploring Computer Adaptive Testing in language assessment. Features real-time simulations, IRT models, and comprehensive analytics for workshops and training.
+# CAT Simulator - Computer Adaptive Testing Tool
 
-# CAT Simulator – Workshop Edition
+A comprehensive web-based simulator for Computer Adaptive Testing (CAT) designed for language assessment professionals and students.
 
-Welcome to the Computer Adaptive Testing (CAT) Simulator! This tool is designed for language assessment professionals and students to explore how adaptive testing works in practice.
+## Features
 
----
+- **Interactive CAT Simulation**: Run adaptive tests with customizable parameters
+- **Multiple Estimation Methods**: MLE and WLE (Warm's Weighted Likelihood Estimation)
+- **Flexible Stopping Rules**: Fixed-length or variable-length based on target SEM
+- **Real-time Visualization**: Charts showing ability progression, SEM curves, and item paths
+- **Comprehensive Analysis**: Aggregate statistics including correlation, RMSE, bias, and MAE
+- **Data Export**: Download simulation results as CSV files
+- **Built-in Help System**: Glossary, FAQ, and preset scenarios
 
-## 📘 Introduction to CAT
+## Getting Started
 
-Computer Adaptive Testing (CAT) dynamically adjusts the difficulty of test items based on the test taker's ability. It uses Item Response Theory (IRT) to estimate ability and select the most informative items. CAT is widely used in language testing for its efficiency, precision, and personalized assessment experience.
+### Prerequisites
 
----
+- Node.js (version 16 or higher)
+- npm or yarn
 
-## 🖥️ System Requirements
+### Installation
 
-- A modern web browser (Chrome, Firefox, Edge, Safari)
-- JavaScript enabled
-- No installation required – runs entirely in the browser
+1. Clone or download this repository
+2. Navigate to the project directory:
+   ```bash
+   cd my-cat-simulator
+   ```
 
----
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## 🚀 Getting Started
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-### 1. **Open the Simulator**
-Launch the simulator in your browser (URL provided by the workshop facilitator).
+5. Open your browser and navigate to the provided local URL (typically `http://localhost:5173`)
 
-### 2. **Load a Preset Scenario**
-Click the **“Load Preset”** button and choose from example scenarios (e.g., Grammar Test, Vocabulary Test, Mixed Topics).
+### Building for Production
 
----
+To create a production build:
 
-## 🧪 Running a Simulation
+```bash
+npm run build
+```
 
-### Step 1: **Configure Test Takers**
-- Enter ability values (e.g., `-1.2, 0.0, 1.5`) in the **Test Takers** input field.
+The built files will be in the `dist` directory, ready for deployment to any static hosting service.
 
-### Step 2: **Configure Item Bank**
-- Enter item difficulties (e.g., `-2.0, -1.0, 0.0, 1.0, 2.0`)
-- Optionally tag items with topics (e.g., `0.0:Grammar`, `1.0:Vocabulary`)
+## Usage
 
-### Step 3: **Set Parameters**
-- Choose **Estimation Method**: MLE or WLE
-- Choose **Stopping Rule**:
-  - Fixed Length (e.g., 10 items)
-  - Target SEM (e.g., 0.3)
-- Set **Item Exposure Limit** (e.g., 20%)
-- Enable **Content Balancing** if desired
+### Configuration
 
-### Step 4: **Run Simulation**
-Click **“Run Simulation”** to begin. The simulator will:
-- Select items adaptively
-- Estimate ability after each item
-- Track SEM and Fisher Information
-- Respect exposure and topic constraints
+1. **Test Takers**: Enter ability values (comma-separated logits)
+2. **Item Bank**: Enter item difficulties (comma-separated logits)
+3. **Test Design**: Choose stopping rule and estimation method
+4. **Run Simulation**: Click "Run Simulation" to start
 
----
+### Results
 
-## 📊 Interpreting Results
+- **Individual Results**: View detailed progression for each test taker
+- **Aggregate Analysis**: See overall performance metrics and visualizations
+- **Export Data**: Download results as CSV for further analysis
 
-### Individual Results
-- **Ability Progression**: Line chart of ability estimates
-- **SEM Curve**: Standard error over time
-- **Item Path**: Items administered and their topics
+## Technical Details
 
-### Aggregate Results
-- **Scatterplot**: True vs. Estimated abilities (with axis labels)
-- **Metrics**: Correlation, RMSE, Bias, MAE
-- **Item Exposure**: Frequency and topic distribution
+- **Framework**: React 19 with Vite
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts library
+- **IRT Models**: 2PL (2-Parameter Logistic) model
+- **Estimation**: Newton-Raphson optimization
 
----
+## Educational Use
 
-## 📁 Exporting Data
+This simulator is designed for:
+- Understanding CAT principles
+- Exploring IRT concepts
+- Comparing estimation methods
+- Analyzing test design parameters
+- Educational workshops and training
 
-Click **“Download CSV”** to export:
-- Test taker responses
-- Item parameters
-- Ability estimates
-- SEM and Fisher Information
-- Topic tags and exposure counts
+## License
 
----
+This project is open source and available under the MIT License.
 
-## 🧭 Tutorial Mode
+## Contributing
 
-Enable **Tutorial Mode** to activate:
-- Tooltips explaining each input and output
-- Step-by-step guidance through the simulation
-- Definitions of key terms (e.g., SEM, Fisher Information)
+Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
----
+## Support
 
-## 🧠 Learning Goals
-
-By the end of the workshop, you will be able to:
-- Explain how CAT works and why it’s used
-- Interpret SEM, Fisher Information, and ability estimates
-- Design your own adaptive test with topic balancing and exposure control
-- Compare adaptive vs. fixed-form test designs
-
----
-
-For questions or feedback, contact your workshop facilitator.
+For questions or support, please refer to the built-in help system or create an issue in the repository.

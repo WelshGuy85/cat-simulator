@@ -1,0 +1,76 @@
+{
+  "test_takers": [
+    {
+      "id": "T001",
+      "true_ability": -2.5
+    },
+    {
+      "id": "T002",
+      "true_ability": -1.0
+    },
+    {
+      "id": "T003",
+      "true_ability": 0.0
+    },
+    {
+      "id": "T004",
+      "true_ability": 1.5
+    },
+    {
+      "id": "T005",
+      "true_ability": 3.0
+    }
+  ],
+  "item_bank": [
+    {
+      "id": "I001",
+      "difficulty": -3.0,
+      "topic": "Grammar"
+    },
+    {
+      "id": "I002",
+      "difficulty": -2.0,
+      "topic": "Vocabulary"
+    },
+    {
+      "id": "I003",
+      "difficulty": -1.0,
+      "topic": "Reading"
+    },
+    {
+      "id": "I004",
+      "difficulty": 0.0,
+      "topic": "Grammar"
+    },
+    {
+      "id": "I005",
+      "difficulty": 1.0,
+      "topic": "Vocabulary"
+    },
+    {
+      "id": "I006",
+      "difficulty": 2.0,
+      "topic": "Reading"
+    },
+    {
+      "id": "I007",
+      "difficulty": 3.0,
+      "topic": "Grammar"
+    },
+    {
+      "id": "I008",
+      "difficulty": 4.0,
+      "topic": "Vocabulary"
+    },
+    {
+      "id": "I009",
+      "difficulty": -2.5,
+      "topic": "Reading"
+    },
+    {
+      "id": "I010",
+      "difficulty": 1.5,
+      "topic": "Grammar"
+    }
+  ]
+}
